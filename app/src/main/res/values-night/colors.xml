@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color">#111111</color><!--主题颜色  用于标题栏、状态栏、导航栏、启动页背景-->
+    <color name="theme_color_secondary">#181818</color><!--次主题颜色-->
+
+    <color name="dialog_title_color">@color/white</color><!--弹窗标题 文字颜色-->
+    <color name="dialog_bg_color">@color/theme_color_secondary</color><!--弹窗 背景颜色-->
+
+    <color name="green">#2EAD4D</color><!--要想代码过得去，主题就要带点绿-->
+</resources>
