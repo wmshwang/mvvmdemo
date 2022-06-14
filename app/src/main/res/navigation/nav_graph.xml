@@ -23,6 +23,9 @@
             android:id="@+id/action_mainFragment_to_splashFragment"
             app:destination="@id/splashFragment"
             app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_mainFragment_to_pictureViewFragment"
+            app:destination="@id/pictureViewFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -39,4 +42,9 @@
         android:name="com.desaysv.mvvmdemo.ui.register.RegisterFragment"
         android:label="register_fragment"
         tools:layout="@layout/register_fragment" />
+    <fragment
+        android:id="@+id/pictureViewFragment"
+        android:name="com.desaysv.mvvmdemo.ui.picture.PictureViewFragment"
+        android:label="PictureViewFragment"
+        tools:layout="@layout/picture_view_fragment"/>
 </navigation>

@@ -1,5 +1,7 @@
 package com.desaysv.mvvmdemo.ui.main;
 
+import android.os.Bundle;
+
 import androidx.core.widget.NestedScrollView;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
@@ -34,6 +36,7 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, MainViewMode
         GridLayoutManager manager = new GridLayoutManager(getContext(), 2);
         viewBinding.rv.setLayoutManager(manager);
         wallPaperAdapter = new WallPaperAdapter();
+        wallPaperAdapter.addChildClickViewIds(R.id.image);
         viewBinding.rv.setAdapter(wallPaperAdapter);
 
         getBackStackStateHandle();//获取navBackStackEntry和savedStateHandle
@@ -81,9 +84,12 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, MainViewMode
 
         //wall 列表点击
        wallPaperAdapter.setOnItemChildClickListener((adapter, view, position) -> {
-//                Intent intent = new Intent(view.getContext(), PictureViewActivity.class);
-//                intent.putExtra("img", verticalBean.getImg());
-//                view.getContext().startActivity(intent);
+           if (view.getId() == R.id.image){
+               LogUtils.d(TAG, " setOnItemChildClickListener img:" + wallPaperAdapter.getData().get(position).getImg());
+               Bundle bundle = new Bundle();
+               bundle.putString("img", wallPaperAdapter.getData().get(position).getImg());
+               NavHostFragment.findNavController(this).navigate(R.id.action_mainFragment_to_pictureViewFragment, bundle);
+           }
        });
     }
 
