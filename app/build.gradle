@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.desaysv.mvvmdemo"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -116,4 +116,6 @@ dependencies {
     annotationProcessor 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
 
     implementation 'com.blankj:utilcodex:1.30.6'
+    implementation 'androidx.activity:activity:1.2.3'
+    implementation "androidx.multidex:multidex:2.0.1"
 }

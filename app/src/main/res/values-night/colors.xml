@@ -7,4 +7,10 @@
     <color name="dialog_bg_color">@color/theme_color_secondary</color><!--弹窗 背景颜色-->
 
     <color name="green">#2EAD4D</color><!--要想代码过得去，主题就要带点绿-->
+    <color name="bnv_bg_color">@color/theme_color</color><!--BottomNavigationView 背景颜色-->
+    <color name="bnv_check_color">#AAAAAA</color>
+    <color name="text_color">@color/white</color><!--文字颜色-->
+    <color name="line">#212121</color><!--分隔线颜色-->
+    <color name="bg_color">@color/theme_color</color><!--背景颜色-->
+    <color name="cursor_color">@color/white</color><!--EditText 光标颜色-->
 </resources>

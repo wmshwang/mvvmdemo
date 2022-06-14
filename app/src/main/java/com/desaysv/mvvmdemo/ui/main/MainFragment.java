@@ -43,6 +43,7 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, MainViewMode
         judeToSplash();//启动时判断是否进入开屏页
         gotoMain();//开屏页倒计时结束进入主页
         loginLister();//登录成功监听
+        loginOutLister();//退出登录监听
     }
 
     @Override
@@ -77,10 +78,8 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, MainViewMode
             }
         });
 
-        //跳转到HomeActivity
-        viewBinding.fabHome.setOnClickListener(v -> {
-//                jumpActivity(HomeActivity.class);
-        });
+        //跳转到HomeFragment
+        viewBinding.fabHome.setOnClickListener(v -> NavHostFragment.findNavController(this).navigate(R.id.action_mainFragment_to_homeFragment));
 
         //wall 列表点击
        wallPaperAdapter.setOnItemChildClickListener((adapter, view, position) -> {
@@ -137,13 +136,26 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, MainViewMode
     private void loginLister(){
         if (navBackStackEntry != null){
             MutableLiveData<Boolean> liveData = savedStateHandle.getLiveData(Constant.IS_LOGIN);
-            liveData.observe(navBackStackEntry, (Observer<Boolean>) success -> {
+            liveData.observe(navBackStackEntry, success -> {
                     if (success) {//登录成功
                         savedStateHandle.set(Constant.IS_LOGIN, false);
                         LogUtils.d(TAG, " 登录成功 ");
                         showMainLayout();//加载首页布局填充数据
                     }
                 });
+        }
+    }
+
+    //退出登录监听
+    private void loginOutLister(){
+        if (navBackStackEntry != null){
+            MutableLiveData<Boolean> liveData = savedStateHandle.getLiveData(Constant.IS_LOGIN_OUT);
+            liveData.observe(navBackStackEntry, success -> {
+                if (success) {//退出成功
+                    savedStateHandle.set(Constant.IS_LOGIN_OUT, false);
+                    NavHostFragment.findNavController(this).navigate(R.id.action_mainFragment_to_loginFragment);
+                }
+            });
         }
     }
 

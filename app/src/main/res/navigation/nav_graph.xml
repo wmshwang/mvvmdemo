@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_mainFragment_to_pictureViewFragment"
             app:destination="@id/pictureViewFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -47,4 +50,8 @@
         android:name="com.desaysv.mvvmdemo.ui.picture.PictureViewFragment"
         android:label="PictureViewFragment"
         tools:layout="@layout/picture_view_fragment"/>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.desaysv.mvvmdemo.ui.home.HomeFragment"
+        android:label="HomeFragment" />
 </navigation>

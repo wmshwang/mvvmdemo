@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="homeViewModel"
+            type="com.desaysv.mvvmdemo.ui.home.HomeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--头部菜单-->
+        <RelativeLayout
+            android:id="@+id/lay_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/theme_color">
+            <!--头像-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_avatar"
+                android:localUrl="@{homeViewModel.user.avatar}"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:padding="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo"
+                app:shapeAppearanceOverlay="@style/circleImageStyle"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp" />
+            <!--名称-->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_avatar"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/iv_avatar"
+                android:text="@{homeViewModel.user.nickname ?? homeViewModel.defaultName}"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_toRightOf="@+id/iv_avatar" />
+            <!--标签-->
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/iv_avatar"
+                android:text="@{homeViewModel.user.introduction ?? homeViewModel.defaultIntroduction}"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_toRightOf="@+id/iv_avatar" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

@@ -15,4 +15,10 @@
     <color name="dialog_bg_color">@color/white</color><!--弹窗 背景颜色-->
 
     <color name="green">#2EAD4D</color><!--要想代码过得去，主题就要带点绿-->
+    <color name="bnv_bg_color">@color/white</color><!--BottomNavigationView 背景颜色 文字、下划线颜色-->
+    <color name="bnv_check_color">#666666</color>
+    <color name="text_color">#FF000000</color><!--文字颜色-->
+    <color name="line">#EEE</color><!--分隔线颜色-->
+    <color name="bg_color">@color/white</color><!--背景颜色-->
+    <color name="cursor_color">@color/theme_color</color><!--EditText 光标颜色-->
 </resources>
