@@ -6,6 +6,7 @@ import androidx.room.Room;
 
 import com.desaysv.mvvmdemo.db.AppDatabase;
 import com.desaysv.mvvmdemo.db.dao.ImageDao;
+import com.desaysv.mvvmdemo.db.dao.NewsDao;
 import com.desaysv.mvvmdemo.db.dao.UserDao;
 import com.desaysv.mvvmdemo.db.dao.WallPaperDao;
 
@@ -44,5 +45,11 @@ public class DataBaseModule {
     @Singleton
     public static ImageDao provideImageDao(AppDatabase database){
         return database.imageDao();
+    }
+
+    @Provides
+    @Singleton
+    public static NewsDao provideNewsDao(AppDatabase database){
+        return database.newsDao();
     }
 }

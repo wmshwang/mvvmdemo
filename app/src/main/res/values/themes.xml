@@ -36,6 +36,12 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <!-- 圆角图片 -->
+    <style name="roundedImageStyle_6">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+
     <!--自定义对话框-->
     <style name="dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>

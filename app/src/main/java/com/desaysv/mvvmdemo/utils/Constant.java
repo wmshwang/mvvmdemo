@@ -39,4 +39,14 @@ public class Constant {
      */
     public static final String IS_LOGIN_OUT = "isLoginOut";
 
+    /**
+     * 今日是否请求了聚合新闻数据
+     */
+    public static final String IS_TODAY_REQUEST_NEWS = "isTodayRequestNews";
+
+    /**
+     * 今日请求聚合新闻数据的时间戳
+     */
+    public static final String REQUEST_TIMESTAMP_NEWS = "newsRequestTimestamp";
+
 }

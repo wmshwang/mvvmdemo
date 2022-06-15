@@ -1,6 +1,7 @@
 package com.desaysv.mvvmdemo.api;
 
 import com.desaysv.mvvmdemo.model.BiYingResponse;
+import com.desaysv.mvvmdemo.model.NewsResponse;
 import com.desaysv.mvvmdemo.model.WallPaperResponse;
 
 import io.reactivex.Observable;
@@ -26,8 +27,8 @@ public interface ApiService {
     /**
      * 聚合新闻数据
      */
-//    @GET("/toutiao/index?type=&page=&page_size=&is_filter=&key=99d3951ed32af2930afd9b38293a08a2")
-//    Observable<NewsResponse> news();
+    @GET("/toutiao/index?type=&page=&page_size=&is_filter=&key=99d3951ed32af2930afd9b38293a08a2")
+    Observable<NewsResponse> news();
 
     /**
      * 聚合新闻数据详情
