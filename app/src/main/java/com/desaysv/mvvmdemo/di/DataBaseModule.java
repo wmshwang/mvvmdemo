@@ -8,6 +8,7 @@ import com.desaysv.mvvmdemo.db.AppDatabase;
 import com.desaysv.mvvmdemo.db.dao.ImageDao;
 import com.desaysv.mvvmdemo.db.dao.NewsDao;
 import com.desaysv.mvvmdemo.db.dao.UserDao;
+import com.desaysv.mvvmdemo.db.dao.VideoDao;
 import com.desaysv.mvvmdemo.db.dao.WallPaperDao;
 
 import javax.inject.Singleton;
@@ -51,5 +52,11 @@ public class DataBaseModule {
     @Singleton
     public static NewsDao provideNewsDao(AppDatabase database){
         return database.newsDao();
+    }
+
+    @Provides
+    @Singleton
+    public static VideoDao provideVideoDao(AppDatabase database){
+        return database.videoDao();
     }
 }

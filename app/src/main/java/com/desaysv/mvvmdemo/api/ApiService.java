@@ -2,6 +2,7 @@ package com.desaysv.mvvmdemo.api;
 
 import com.desaysv.mvvmdemo.model.BiYingResponse;
 import com.desaysv.mvvmdemo.model.NewsResponse;
+import com.desaysv.mvvmdemo.model.VideoResponse;
 import com.desaysv.mvvmdemo.model.WallPaperResponse;
 
 import io.reactivex.Observable;
@@ -39,8 +40,8 @@ public interface ApiService {
     /**
      * 聚合热门视频数据
      */
-//    @GET("/fapig/douyin/billboard?type=hot_video&size=20&key=a9c49939cae34fc7dae570b1a4824be4")
-//    Observable<VideoResponse> video();
+    @GET("/fapig/douyin/billboard?type=hot_video&size=20&key=a9c49939cae34fc7dae570b1a4824be4")
+    Observable<VideoResponse> video();
 
 
 }
