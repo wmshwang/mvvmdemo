@@ -91,7 +91,7 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding, HomeViewMode
 
                     break;
                 case R.id.item_about:
-//                    jumpActivity(AboutActivity.class);
+                    NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_aboutFragment);
                     break;
                 case R.id.item_logout:
                     logout();

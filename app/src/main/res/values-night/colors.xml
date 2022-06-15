@@ -14,4 +14,5 @@
     <color name="bg_color">@color/theme_color</color><!--背景颜色-->
     <color name="cursor_color">@color/white</color><!--EditText 光标颜色-->
     <color name="tab_color">@color/white</color><!--TabLayout 文字、下划线颜色-->
+    <color name="about_bg_color">#171918</color><!--关于页面 背景颜色-->
 </resources>
