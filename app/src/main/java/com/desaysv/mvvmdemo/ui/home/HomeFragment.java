@@ -84,12 +84,6 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding, HomeViewMode
         viewBinding.ivAvatar.setOnClickListener(v -> viewBinding.drawerLayout.open());
         viewBinding.navView.setNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
-                case R.id.item_notebook://记事本
-//                    jumpActivity(NotebookActivity.class);
-                    break;
-                case R.id.item_setting:
-
-                    break;
                 case R.id.item_about:
                     NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_aboutFragment);
                     break;
