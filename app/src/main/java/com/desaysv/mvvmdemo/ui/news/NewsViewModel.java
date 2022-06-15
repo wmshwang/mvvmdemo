@@ -1,12 +1,12 @@
-package com.desaysv.mvvmdemo.ui.info;
+package com.desaysv.mvvmdemo.ui.news;
 
 import androidx.hilt.lifecycle.ViewModelInject;
 
 import com.desaysv.mvvmdemo.ui.base.BaseViewModel;
 
-public class InfoViewModel extends BaseViewModel {
+public class NewsViewModel extends BaseViewModel {
 
     @ViewModelInject
-    public InfoViewModel() {
+    public NewsViewModel() {
     }
 }

@@ -13,4 +13,5 @@
     <color name="line">#212121</color><!--分隔线颜色-->
     <color name="bg_color">@color/theme_color</color><!--背景颜色-->
     <color name="cursor_color">@color/white</color><!--EditText 光标颜色-->
+    <color name="tab_color">@color/white</color><!--TabLayout 文字、下划线颜色-->
 </resources>

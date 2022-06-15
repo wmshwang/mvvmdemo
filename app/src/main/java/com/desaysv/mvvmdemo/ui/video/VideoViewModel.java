@@ -1,12 +1,12 @@
-package com.desaysv.mvvmdemo.ui.map;
+package com.desaysv.mvvmdemo.ui.video;
 
 import androidx.hilt.lifecycle.ViewModelInject;
 
 import com.desaysv.mvvmdemo.ui.base.BaseViewModel;
 
-public class MapViewModel extends BaseViewModel {
+public class VideoViewModel extends BaseViewModel {
 
     @ViewModelInject
-    public MapViewModel() {
+    public VideoViewModel() {
     }
 }
